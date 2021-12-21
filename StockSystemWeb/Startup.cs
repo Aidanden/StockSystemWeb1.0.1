@@ -25,6 +25,11 @@ namespace StockSystemWeb
                 app.UseDeveloperExceptionPage();
             }
 
+            if(env.IsStaging())
+            {
+
+            }
+
             app.Run(async (context) =>
             {
                 await context.Response.WriteAsync("Hello World!");
